@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise - Budget Dashboard</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>Spend<span>Wise</span></h2>
+                <p>Smart Money Management</p>
+            </div>
+
+            <nav>
+                <a href="#dashboard" class="active">🏠 Dashboard</a>
+                <a href="#budget">💰 My Budget</a>
+                <a href="#expenses">💳 Expenses</a>
+                <a href="#results">📊 Budget Results</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Spend wisely,</p>
+                <strong>Live better!</strong>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content" id="dashboard">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div>
+                    <h1>SpendWise Dashboard</h1>
+                    <p>Manage your money and track your spending.</p>
+                </div>
+
+                <div class="profile">
+                    <span>👤</span>
+                    <div>
+                        <strong>My Account</strong>
+                        <small>Personal Budget</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- INTRODUCTION -->
+            <section class="intro">
+                <h2>Welcome to SpendWise!</h2>
+
+                <p>
+                    Take control of your finances by setting a budget,
+                    recording expenses and calculating your remaining balance.
+                </p>
+
+                <button id="startButton">
+                    + Enter Budget and Expenses
+                </button>
+            </section>
+
+
+            <!-- BUDGET SUMMARY -->
+            <section class="summary" id="budget">
+
+                <div class="summary-card">
+                    <div class="summary-icon">💰</div>
+                    <h3>Monthly Budget</h3>
+                    <p id="budgetDisplay">KSh 0</p>
+                    <small>Your planned budget</small>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">📤</div>
+                    <h3>Total Expenses</h3>
+                    <p id="expensesDisplay">KSh 0</p>
+                    <small>Your total spending</small>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">💵</div>
+                    <h3>Remaining Balance</h3>
+                    <p id="balanceDisplay">KSh 0</p>
+                    <small>Your available balance</small>
+                </div>
+
+            </section>
+
+
+            <!-- EXPENSE CATEGORIES -->
+            <section class="categories" id="expenses">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Expense Categories</h2>
+                        <p>Examples of common spending categories.</p>
+                    </div>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="card" tabindex="0">
+                        <span>🍔</span>
+                        <h3>Food</h3>
+                        <p>Food and groceries</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <span>🚗</span>
+                        <h3>Transport</h3>
+                        <p>Travel expenses</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <span>🏠</span>
+                        <h3>Rent</h3>
+                        <p>Housing expenses</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <span>🎬</span>
+                        <h3>Entertainment</h3>
+                        <p>Leisure activities</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <span>💰</span>
+                        <h3>Savings</h3>
+                        <p>Money saved</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <span>💡</span>
+                        <h3>Utilities</h3>
+                        <p>Water and electricity</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESULTS -->
+            <section class="results" id="results">
+
+                <h2>Budget Calculation Results</h2>
+
+                <p id="resultMessage">
+                    Click the button above to enter your budget and expenses.
+                </p>
+
+                <div class="result-details">
+                    <p>
+                        <strong>Budget status:</strong>
+                        <span id="budgetStatus">Not calculated</span>
+                    </p>
+
+                    <p>
+                        <strong>Number of expenses:</strong>
+                        <span id="expenseCount">0</span>
+                    </p>
+                </div>
+
+                <h3>Recorded Expenses</h3>
+
+                <ul id="expenseList">
+                    <li>No expenses recorded yet.</li>
+                </ul>
+
+                <button id="resetButton" class="reset-button">
+                    Reset Budget
+                </button>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <p>
+                    © 2026 SpendWise Dashboard |
+                    Manage Your Money Wisely.
+                </p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
+
